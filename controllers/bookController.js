@@ -10,11 +10,11 @@ export function getBook(req, res) {
         return res.status(404).json(
             {
                 message: "Book is not available at this ID"
-            });
+            }
+        );
     }
     res.status(200).json(book);
 }
-
 export function addBook(req, res) {
     const { title, author } = req.body;
     if (!title || !author) {
@@ -34,7 +34,6 @@ export function addBook(req, res) {
     );
     res.status(201).json(newBook);
 }
-
 export function updateBook(req, res) {
     const book = Book.update(Number(req.params.id), req.body);
     if (!book) {
@@ -46,7 +45,6 @@ export function updateBook(req, res) {
     }
     res.status(200).json(book);
 }
-
 export function deleteBook(req, res) {
     const book = Book.remove(Number(req.params.id));
     if (!book) {
