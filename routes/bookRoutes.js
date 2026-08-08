@@ -6,7 +6,7 @@ import {
     addBook,
     updateBook,
     deleteBook
-} from "../controllers/studentController.js";
+} from "../controllers/bookController.js";
 
 const router = express.Router();
 router.get("/", getBooks);

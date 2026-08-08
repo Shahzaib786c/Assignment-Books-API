@@ -1,4 +1,4 @@
-import * as Book from "../models/studentModel.js";
+import * as Book from "../models/bookModel.js";
 
 export function getBooks(req, res) {
     res.status(200).json(Book.findAll());
