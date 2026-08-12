@@ -1,4 +1,6 @@
-export default {
-    port: 3000,
-    appName: "Book API Management"
+const config = {
+    port: process.env.PORT || 3000,
+    appName: "Books API"
 };
+
+export default config; 
